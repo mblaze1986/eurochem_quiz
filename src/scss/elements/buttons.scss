@@ -4,11 +4,16 @@
   border-radius: 50%;
   background: #ffffff;
   box-shadow: 0px 2px 4px rgba(0, 171, 228, 0.3), 0px 4px 8px rgba(0, 171, 228, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  & > span {
-    font-weight: 900;
-    font-size: em(24);
-    line-height: 156%;
+  &::before {
+    content: '';
+    width: em(24);
+    height: em(24);
+    background: 0 0 / 100% 100% url(../img/chevron.svg);
+    margin-right: 2px;
   }
 }
 

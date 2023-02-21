@@ -1,4 +1,6 @@
 .intro {
+  color: #ffffff;
+
   &__hello {
     width: 90%;
     height: em(355);
@@ -36,22 +38,18 @@
 
   &__title {
     margin-top: em(14);
-  }
 
-  &__subtitle {
-    margin-top: em(23);
-  }
-
-  &__span {
-    color: #ffffff;
-
-    &--title {
+    & > span {
       font-weight: 700;
       line-height: 122.222222%; /* 44/36 */
       font-size: em(36);
     }
+  }
 
-    &--subtitle {
+  &__subtitle {
+    margin-top: em(23);
+
+    & > span {
       font-weight: 400;
       line-height: 118.75%; /* 19/16 */
       font-size: em(16);
