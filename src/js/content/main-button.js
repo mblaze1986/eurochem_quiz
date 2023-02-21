@@ -20,7 +20,7 @@ rangeInputs.forEach((rangeInput) => {
       setTimeout(() => {
         rangeInput.value = 0;
         rangeProgress.style.width = 0;
-      }, 3000);
+      }, 1000);
       activeSection.classList.remove('active');
       activeSection.classList.add('hidden');
       activeSection.nextElementSibling.classList.remove('hidden');

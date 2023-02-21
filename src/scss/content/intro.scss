@@ -11,7 +11,7 @@
     width: 90%;
     height: em(355);
     background: #ffffff;
-    box-shadow: inset 0px 3px 20px rgba(0, 60, 101, 0.43);
+    box-shadow: inset 0px 0px 40px 27px rgb(0 60 101 / 43%);
     border-radius: 0 em(192) em(192) 0;
     display: flex;
     align-items: center;
@@ -50,6 +50,8 @@
   }
 
   &__subtitle {
+    margin-bottom: em(10);
+
     & > span {
       font-weight: 400;
       line-height: 118.75%; /* 19/16 */
