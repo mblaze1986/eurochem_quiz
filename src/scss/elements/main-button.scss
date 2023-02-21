@@ -1,5 +1,5 @@
 .range-button {
-  width: 80%;
+  width: 100%;
   z-index: 5;
   margin: 0 auto;
 
@@ -7,7 +7,7 @@
     height: em(60);
     position: relative;
     background: #fff;
-    border-radius: em(35);
+    border-radius: em(28);
     overflow: hidden;
     box-shadow: 0 0 13px #fff;
   }
@@ -46,15 +46,14 @@
     transform: translateY(-50%);
     z-index: 1;
     max-width: 100%;
-    border-radius: em(35);
   }
 
   &__span {
     position: absolute;
-    right: em(24);
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
-    color: black;
+    transform: translateX(-40%) translateY(-50%);
+    color: #000;
     white-space: nowrap;
 
     & > span {
