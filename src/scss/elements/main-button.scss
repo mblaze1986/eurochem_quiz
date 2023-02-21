@@ -1,0 +1,63 @@
+.range-button {
+  width: 80%;
+  z-index: 5;
+  margin: 0 auto;
+
+  &__wrap {
+    height: em(60);
+    position: relative;
+    background: #fff;
+    border-radius: em(35);
+    overflow: hidden;
+  }
+
+  &__input {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    margin: 0;
+    cursor: pointer;
+    position: absolute;
+    padding: 0 em(10);
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: em(45);
+      height: em(45);
+      border-radius: 50%;
+      background: #00abe4 url(../img/arrow.svg) 50% 50%/55% 55% no-repeat;
+      position: relative;
+      z-index: 50;
+      box-shadow: 1px 1px 12px 5px #00abe4;
+    }
+  }
+
+  &__progress {
+    position: absolute;
+    content: '';
+    height: 100%;
+    background-color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    max-width: 100%;
+    border-radius: em(35);
+  }
+
+  &__span {
+    position: absolute;
+    right: em(24);
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    white-space: nowrap;
+
+    & > span {
+      font-size: em(12);
+    }
+  }
+}

@@ -1,6 +1,12 @@
 .intro {
   color: #ffffff;
 
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: em(24);
+  }
+
   &__hello {
     width: 90%;
     height: em(355);
@@ -27,7 +33,6 @@
   &__logo {
     width: em(211);
     height: em(46);
-    margin-top: em(32);
 
     & > img {
       display: block;
@@ -37,8 +42,6 @@
   }
 
   &__title {
-    margin-top: em(14);
-
     & > span {
       font-weight: 700;
       line-height: 122.222222%; /* 44/36 */
@@ -47,8 +50,6 @@
   }
 
   &__subtitle {
-    margin-top: em(23);
-
     & > span {
       font-weight: 400;
       line-height: 118.75%; /* 19/16 */
