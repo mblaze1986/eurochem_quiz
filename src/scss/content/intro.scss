@@ -11,7 +11,7 @@
     width: 90%;
     height: em(355);
     background: #ffffff;
-    box-shadow: inset 0px 0px 40px 27px rgb(0 60 101 / 43%);
+    box-shadow: inset 0 0 70px 20px rgb(0 60 101 / 43%);
     border-radius: 0 em(192) em(192) 0;
     display: flex;
     align-items: center;
@@ -19,14 +19,19 @@
     margin-left: em(-20);
   }
 
-  &__hand {
-    width: em(217);
-    height: em(217);
+  &__pic {
+    width: em(200);
+    height: em(200);
+    padding-right: em(24);
 
-    & > img {
+    & > svg {
       display: block;
       width: 100%;
       height: 100%;
+
+      & > path {
+        fill: #052039;
+      }
     }
   }
 
