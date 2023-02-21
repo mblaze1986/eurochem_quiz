@@ -1,0 +1,60 @@
+.intro {
+  &__hello {
+    width: 90%;
+    height: em(355);
+    background: #ffffff;
+    box-shadow: inset 0px 3px 20px rgba(0, 60, 101, 0.43);
+    border-radius: 0 em(192) em(192) 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: em(-20);
+  }
+
+  &__hand {
+    width: em(217);
+    height: em(217);
+
+    & > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__logo {
+    width: em(211);
+    height: em(46);
+    margin-top: em(32);
+
+    & > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    margin-top: em(14);
+  }
+
+  &__subtitle {
+    margin-top: em(23);
+  }
+
+  &__span {
+    color: #ffffff;
+
+    &--title {
+      font-weight: 700;
+      line-height: 122.222222%; /* 44/36 */
+      font-size: em(36);
+    }
+
+    &--subtitle {
+      font-weight: 400;
+      line-height: 118.75%; /* 19/16 */
+      font-size: em(16);
+    }
+  }
+}

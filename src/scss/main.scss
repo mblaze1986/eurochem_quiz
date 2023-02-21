@@ -1,0 +1,66 @@
+:root {
+  --app-height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-size: 4.10256vw;
+  font-family: "Proxima Nova Rg";
+  position: relative;
+
+  @media screen and (max-width: 540px) {
+    font-size: 2.7vw;
+  }
+
+  @media screen and (max-width: 440px) {
+    font-size: 4.4vw;
+  }
+
+  @media screen and (max-width: 420px) {
+    font-size: 4.10256vw;
+  }
+
+  @media screen and (max-width: 388px) {
+    font-size: 3.8vw;
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: 3.7vw;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 em(20);
+}
+
+.content {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  background: url(../img/intro_bckg.jpg) 0 0/cover no-repeat;
+  position: relative;
+}
+
+section {
+  width: 100%;
+  transition: all 0.5s ease-out;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}

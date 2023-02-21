@@ -1,0 +1,112 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+
+  &__nav {
+    display: flex;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: em(10);
+    padding: 2px;
+    margin-bottom: em(18);
+    width: calc(100% - em(52));
+    align-self: flex-end;
+  }
+
+  &__head {
+    flex: 1;
+    border-radius: em(8);
+    padding: em(8);
+    transition: background 0.3s ease-out;
+    cursor: pointer;
+    text-align: center;
+
+    &.active {
+      background: #fff;
+    }
+  }
+
+  &__field {
+    padding: em(30);
+    background: #fff;
+    border-radius: em(30);
+    min-height: em(540);
+    box-shadow: 0px 4px 15px -1px rgba(0, 0, 0, 0.25);
+
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__span {
+    pointer-events: none;
+
+    &--head {
+      line-height: 123.076923%; /* 16/13 */
+      font-size: em(13);
+      color: #003c65;
+      font-weight: 800;
+    }
+  }
+
+  & .round-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.card {
+  color: #003c65;
+
+  &__title {
+    text-align: center;
+    margin-bottom: em(20);
+  }
+
+  &__text {
+    margin-bottom: em(48);
+  }
+
+  &__number {
+    text-align: center;
+    color: #fdc600;
+  }
+
+  &__small {
+    text-align: center;
+    margin-bottom: em(28);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__span {
+    &--title {
+      line-height: 125%; /* 30/24 */
+      font-weight: 700;
+      font-size: em(24);
+    }
+
+    &--text {
+      font-weight: 400;
+      line-height: 84.210526%; /* 16/19 */
+    }
+
+    &--number {
+      line-height: 80%; /* 20/25 */
+      font-weight: 700;
+      font-size: em(25);
+    }
+
+    &--small {
+      font-weight: 400;
+      font-size: em(12);
+      line-height: 166.666667%; /* 20/12 */
+    }
+  }
+}
