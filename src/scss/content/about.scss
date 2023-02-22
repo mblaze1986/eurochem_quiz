@@ -29,9 +29,10 @@
     & > span {
       pointer-events: none;
       line-height: 123.076923%; /* 16/13 */
-      font-size: em(13);
+      font-size: em(12);
       color: #000;
-      font-weight: 800;
+      font-weight: 700;
+      white-space: nowrap;
     }
   }
 
@@ -43,7 +44,7 @@
 
   &__field {
     padding: em(30);
-    min-height: em(540);
+    min-height: em(560);
 
     display: none;
 
