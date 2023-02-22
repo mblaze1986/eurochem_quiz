@@ -3,7 +3,8 @@ import './common/appheight.js';
 
 // content -------------------------------
 import './content/tabs.js';
+import './content/questions.js';
 
 // elements -------------------------------
-import './content/switch-buttons.js';
-import './content/main-button.js';
+import './elements/switch-buttons.js';
+import './elements/main-button.js';

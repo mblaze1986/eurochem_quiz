@@ -10,13 +10,11 @@
 // styles -----------------------------------------------
 @import "main.scss";
 
-// content ----------------------------------------------
-@import "content/intro.scss";
-@import "content/about.scss";
-
 // elements ---------------------------------------------
 @import "elements/buttons.scss";
 @import "elements/main-button.scss";
 
-// common -----------------------------------------------
-@import "common/hidden-active.scss";
+// content ----------------------------------------------
+@import "content/intro.scss";
+@import "content/about.scss";
+@import "content/questions.scss";
