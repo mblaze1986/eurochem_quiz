@@ -69,3 +69,15 @@ document.questionsBack = () => {
   allQuestions[allQuestions.length - 1].classList.add('active');
   allQuestions[allQuestions.length - 1].classList.remove('hidden', 'lefted', 'righted');
 };
+
+document.questionsCount = () => {
+  const allQuestions = document.querySelectorAll('.question');
+  let letftedQuestions = document.querySelectorAll('.question.lefted');
+  let rightedQuestions = document.querySelectorAll('.question.righted');
+
+  const bar = document.querySelector('.questions__bar');
+
+  if (letftedQuestions || rightedQuestions) {
+    bar.style.width = ((letftedQuestions.length + rightedQuestions.length + 1) / allQuestions.length) * 100 + '%';
+  }
+};

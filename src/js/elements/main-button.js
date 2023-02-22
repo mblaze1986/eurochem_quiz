@@ -11,8 +11,6 @@ rangeInputs.forEach((rangeInput) => {
   };
 
   rangeInput.addEventListener('change', (event) => {
-    let activeSection = document.querySelector('section.active');
-
     if (rangeInput.value < 30) {
       rangeInput.value = 0;
       rangeProgress.style.width = 0;

@@ -15,6 +15,8 @@ allQuestions.forEach((question) => {
       activeQuestion.classList.add('lefted');
       document.questionsOver()
     }
+
+    document.questionsCount();
   });
 
   mc.on('swiperight', function (ev) {
@@ -29,5 +31,7 @@ allQuestions.forEach((question) => {
       activeQuestion.classList.add('righted');
       document.questionsOver()
     }
+
+    document.questionsCount();
   });
 });

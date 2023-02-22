@@ -10,6 +10,8 @@ const modal = document.querySelector('.modal');
 
 if (window.innerHeight < window.innerWidth) {
   modal.classList.add('active');
+} else {
+  modal.classList.remove('active');
 }
 
 window.onresize = () => {
