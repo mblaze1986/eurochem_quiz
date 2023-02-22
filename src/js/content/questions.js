@@ -13,20 +13,10 @@ const backQuestion = document.querySelector('.questions__back');
 backQuestion.addEventListener('click', (event) => {
   let activeQuestion = document.querySelector('.question.active');
 
-  if (activeQuestion.previousElementSibling) {
-    activeQuestion.classList.add('hidden');
-    activeQuestion.classList.remove('active');
-    activeQuestion.previousElementSibling.classList.add('active');
-    activeQuestion.previousElementSibling.classList.remove('hidden');
-  }
+  document.prevQuestion();
 
   if (activeQuestion.previousElementSibling === null) {
-    let activeSection = document.querySelector('section.active');
-
-    activeSection.classList.remove('active');
-    activeSection.classList.add('hidden');
-    activeSection.previousElementSibling.classList.remove('hidden');
-    activeSection.previousElementSibling.classList.add('active');
+    document.prevSection();
   }
 });
 
@@ -37,11 +27,13 @@ const noButton = document.querySelector('.questions__no');
 noButton.addEventListener('click', (event) => {
   let activeQuestion = document.querySelector('.question.active');
 
-  if (activeQuestion.nextElementSibling) {
+  document.nextQuestion();
+  document.leftedQuestion();
+
+  if (activeQuestion.nextElementSibling === null) {
     activeQuestion.classList.add('hidden');
     activeQuestion.classList.remove('active');
-    activeQuestion.nextElementSibling.classList.add('active');
-    activeQuestion.nextElementSibling.classList.remove('hidden');
+    activeQuestion.classList.add('lefted');
   }
 });
 
@@ -52,10 +44,12 @@ const yesButton = document.querySelector('.questions__yes');
 yesButton.addEventListener('click', (event) => {
   let activeQuestion = document.querySelector('.question.active');
 
-  if (activeQuestion.nextElementSibling) {
+  document.nextQuestion();
+  document.rightedQuestion();
+
+  if (activeQuestion.nextElementSibling === null) {
     activeQuestion.classList.add('hidden');
     activeQuestion.classList.remove('active');
-    activeQuestion.nextElementSibling.classList.add('active');
-    activeQuestion.nextElementSibling.classList.remove('hidden');
+    activeQuestion.classList.add('righted');
   }
 });
