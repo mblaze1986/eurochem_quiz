@@ -9,7 +9,7 @@
     background: #fff;
     border-radius: em(28);
     overflow: hidden;
-    box-shadow: 0 0 13px #fff;
+    box-shadow: 0 0 em(13) #fff;
   }
 
   &__input {
@@ -33,7 +33,7 @@
       background: #00abe4 url(../img/arrow.svg) 50% 50%/55% 55% no-repeat;
       position: relative;
       z-index: 50;
-      box-shadow: 1px 1px 12px 5px #00abe4;
+      box-shadow: 0 0 em(12) em(5) #00abe4;
     }
   }
 
