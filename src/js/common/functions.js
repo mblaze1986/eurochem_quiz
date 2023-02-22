@@ -34,9 +34,7 @@ document.prevQuestion = () => {
     activeQuestion.classList.add('hidden');
     activeQuestion.classList.remove('active');
     activeQuestion.previousElementSibling.classList.add('active');
-    activeQuestion.previousElementSibling.classList.remove('hidden');
-    activeQuestion.previousElementSibling.classList.remove('lefted');
-    activeQuestion.previousElementSibling.classList.remove('righted');
+    activeQuestion.previousElementSibling.classList.remove('hidden', 'lefted', 'righted');
   }
 };
 
@@ -54,4 +52,20 @@ document.rightedQuestion = () => {
   if (!activeQuestion.previousElementSibling.classList.contains('lefted')) {
     activeQuestion.previousElementSibling.classList.add('righted');
   }
+};
+
+document.questionsOver = () => {
+  const questionsSection = document.querySelector('section.questions');
+  questionsSection.classList.remove('active');
+  questionsSection.classList.add('hidden');
+  questionsSection.nextElementSibling.classList.add('active');
+};
+
+document.questionsBack = () => {
+  const allQuestions = document.querySelectorAll('.question');
+
+  document.prevSection();
+
+  allQuestions[allQuestions.length - 1].classList.add('active');
+  allQuestions[allQuestions.length - 1].classList.remove('hidden', 'lefted', 'righted');
 };

@@ -21,10 +21,7 @@ rangeInputs.forEach((rangeInput) => {
         rangeInput.value = 0;
         rangeProgress.style.width = 0;
       }, 1000);
-      activeSection.classList.remove('active');
-      activeSection.classList.add('hidden');
-      activeSection.nextElementSibling.classList.remove('hidden');
-      activeSection.nextElementSibling.classList.add('active');
+      document.nextSection();
     }
   });
 });

@@ -34,6 +34,7 @@ noButton.addEventListener('click', (event) => {
     activeQuestion.classList.add('hidden');
     activeQuestion.classList.remove('active');
     activeQuestion.classList.add('lefted');
+    document.questionsOver()
   }
 });
 
@@ -51,5 +52,6 @@ yesButton.addEventListener('click', (event) => {
     activeQuestion.classList.add('hidden');
     activeQuestion.classList.remove('active');
     activeQuestion.classList.add('righted');
+    document.questionsOver()
   }
 });

@@ -13,6 +13,7 @@ allQuestions.forEach((question) => {
       activeQuestion.classList.add('hidden');
       activeQuestion.classList.remove('active');
       activeQuestion.classList.add('lefted');
+      document.questionsOver()
     }
   });
 
@@ -26,6 +27,7 @@ allQuestions.forEach((question) => {
       activeQuestion.classList.add('hidden');
       activeQuestion.classList.remove('active');
       activeQuestion.classList.add('righted');
+      document.questionsOver()
     }
   });
 });
