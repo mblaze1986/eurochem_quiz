@@ -10,6 +10,10 @@
   align-items: center;
   display: none;
 
+  @media screen and (min-width: 540px) {
+    display: flex;
+  }
+
   &.active {
     display: flex;
   }

@@ -8,12 +8,12 @@ appHeight();
 // ----------------
 const modal = document.querySelector('.modal');
 
-if (window.innerHeight < innerWidth || window.innerWidth > 540) {
+if (window.innerHeight < window.innerWidth) {
   modal.classList.add('active');
 }
 
 window.onresize = () => {
-  if (window.innerHeight < innerWidth || window.innerWidth > 540) {
+  if (window.innerHeight < window.innerWidth) {
     modal.classList.add('active');
   } else {
     modal.classList.remove('active');
