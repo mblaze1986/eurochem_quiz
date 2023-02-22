@@ -1,0 +1,28 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #052039;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  &__body {
+    padding: em(40);
+  }
+
+  &__title {
+    text-align: center;
+    & > span {
+      color: #fff;
+      font-size: em(20);
+    }
+  }
+}
