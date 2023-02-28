@@ -11,6 +11,10 @@
   font-family: 'Montserrat', sans-serif;
   position: relative;
 
+  @media screen and (min-width: 991px) {
+    font-size: 2vw;
+  }
+
   @media screen and (max-width: 540px) {
     font-size: 2.7vw;
   }
