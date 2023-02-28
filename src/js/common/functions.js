@@ -58,6 +58,7 @@ document.questionsOver = () => {
   const questionsSection = document.querySelector('section.questions');
   questionsSection.classList.remove('active');
   questionsSection.classList.add('hidden');
+  questionsSection.nextElementSibling.classList.remove('hidden');
   questionsSection.nextElementSibling.classList.add('active');
 };
 
@@ -88,5 +89,13 @@ document.questionsCount = () => {
 
   if (letftedQuestions || rightedQuestions) {
     bar.style.width = ((letftedQuestions.length + rightedQuestions.length) / allQuestions.length) * 100 + '%';
+
+    letftedQuestions.forEach((letftedQuestion) => {
+      letftedQuestion.setAttribute('bal', 0);
+    });
+
+    rightedQuestions.forEach((rightedQuestion) => {
+      rightedQuestion.setAttribute('bal', 5);
+    });
   }
 };
