@@ -90,12 +90,23 @@ document.questionsCount = () => {
   if (letftedQuestions || rightedQuestions) {
     bar.style.width = ((letftedQuestions.length + rightedQuestions.length) / allQuestions.length) * 100 + '%';
 
+    let questionsData = [];
+
     letftedQuestions.forEach((letftedQuestion) => {
-      letftedQuestion.setAttribute('bal', 0);
+      questionsData.push({
+        score: 0,
+      });
     });
 
     rightedQuestions.forEach((rightedQuestion) => {
-      rightedQuestion.setAttribute('bal', 5);
+      questionsData.push({
+        score: 5,
+      });
     });
+
+    const scoresSumm = questionsData.map((item) => item.score).reduce((prev, curr) => prev + curr, 0);
+
+    const pageResult = document.querySelector('.result__value');
+    pageResult.innerHTML = scoresSumm;
   }
 };

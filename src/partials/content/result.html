@@ -1,4 +1,17 @@
 <section class="result hidden">
-  <p style="background: white;">result</p>
-  <button class="round-btn back-to-question" onclick="document.questionsBack()"></button>
+  <div class="container">
+    <div class="result__body">
+      <button class="result__back round-btn back-to-question" onclick="document.questionsBack()"></button>
+      <h3 class="result__title"><span>Поздравляем</span></h3>
+      <p class="result__subtitle"><span>Ваш результат:</span></p>
+      <p class="result__scores">
+        <span class="result__value">00</span>
+        <span class="result__units">баллов</span>
+      </p>
+      <p class="result__text"><span>Здорово! Заполни заявку на следюущей странице и мы свяжемся с тобой.</span></p>
+      <button class="result__next blue-btn" onclick="document.nextSection();">
+        <span>Заполнить заявку</span>
+      </button>
+    </div>
+  </div>
 </section>
