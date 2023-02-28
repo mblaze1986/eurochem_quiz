@@ -6,17 +6,6 @@ allQuestions.forEach((question) => {
   allQuestions[0].classList.add('active');
 });
 
-let letftedQuestions = document.querySelectorAll('.question.lefted');
-let rightedQuestions = document.querySelectorAll('.question.righted');
-
-const bar = document.querySelector('.questions__bar');
-
-if (letftedQuestions || rightedQuestions) {
-  bar.style.width = ((letftedQuestions.length + rightedQuestions.length + 1) / allQuestions.length) * 100 + '%';
-}
-
-console.log(bar.style.width);
-
 // --------------------
 
 const backQuestion = document.querySelector('.questions__back');
