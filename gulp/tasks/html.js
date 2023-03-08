@@ -11,6 +11,12 @@ export const html = () => {
         removeComments: true,
       })
     )
+    .pipe(
+      app.plugins.if(
+        app.isBuild && app.isExpanded,
+        app.plugins.gulpPrettier(),
+      )
+    )
     .pipe(app.gulp.dest(app.path.build.html))
     .pipe(app.plugins.browsersync.stream());
 };
